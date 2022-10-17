@@ -1,0 +1,25 @@
+﻿@model List<Card>;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome to Deck of Cards</h1>
+    Your Deck Id is: @Model <br/>
+    Cards Remaining: @Model.remaining <br/> <br/>
+
+    <a href="/draw">Draw 5 Cards Here</a>
+
+</div>*@
+
+<div>
+    <h2>Your Cards Are:</h2>
+    @foreach(Card card in Model)
+    {
+        <div>
+            @card.code
+            <img src="@card.image" />
+        </div>
+    }
+</div>
